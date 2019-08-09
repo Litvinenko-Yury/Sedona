@@ -16,6 +16,7 @@ var include = require("posthtml-include");
 var del = require("del");
 var htmlmin = require("gulp-htmlmin");
 var uglify = require("gulp-uglify");
+const ghPages = require('gh-pages');
 
 //копируем папки из папки source в папку build.
 gulp.task("copyFolderBuild", function () {
