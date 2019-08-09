@@ -1,0 +1,26 @@
+.btn {
+  display: block;
+  width: 100%;
+  padding-top: 17px;
+  padding-bottom: 15px;
+  text-align: center;
+  //vertical-align: middle;
+  user-select: none;
+  font-size: $font-size--large;
+  font-weight: 700;
+  line-height: $line-height--large;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: $color-main;
+  border: none;
+  outline: none;
+
+  &:hover {
+    background-color: $color-main--hover;
+  }
+
+  &:active {
+    color: $color-main--lightest;
+    background-color: $color-main--darken;
+  }
+}

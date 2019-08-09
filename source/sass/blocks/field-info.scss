@@ -1,0 +1,227 @@
+.field-info {
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    margin-top: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 67px;
+    margin-bottom: 0;
+  }
+
+  /*серая полоса над блоком для моб*/
+  &::before {
+    @media (max-width: $mobile-width) {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 111.2%;
+      height: 1px;
+      top: 0;
+      left: -5.65%;
+      background-color: $gray--light-2;
+    }
+  }
+}
+
+  .field-info__title {
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+
+    @media (max-width: $mobile-width) {
+      padding: 20px 0;
+    }
+
+    @media (min-width: $tablet-width) {
+      position: relative;
+      margin-bottom: 23px;
+      font-size: $font-size--large;
+
+      /*серая полоса слева от h2*/
+      &::before {
+        position: absolute;
+        display: block;
+        content: "";
+        width: 19.29%;
+        height: 1px;
+        top: calc(50% - 2px);
+        left: 0;
+        background-color: $gray--light-2;
+      }
+
+      /*серая полоса справа от h2*/
+      &::after {
+        position: absolute;
+        display: block;
+        content: "";
+        width: 19.29%;
+        height: 1px;
+        top: calc(50% - 2px);
+        right: 0;
+        background-color: $gray--light-2;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 75px;
+    }
+  }
+
+  .field-info__wrap {
+    position: relative;
+
+    @media (max-width: $mobile-width) {
+      margin-bottom: 12px;
+
+      &:last-child {
+        margin-bottom: 29px;
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 25px;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: flex;
+      align-items: baseline;
+    }
+
+    &:nth-child(2) {
+      @media (min-width: $desktop-width) {
+        width: 400px;
+      }
+    }
+
+    &:nth-child(3) {
+      @media (min-width: $desktop-width) {
+        width: 480px;
+      }
+    }
+
+    /*фон - серый квадрат*/
+    &::before {
+      position: absolute;
+      content: "";
+      width: 58px;
+      height: 58px;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+      background-color: $gray--light-2;
+
+      @media (min-width: $desktop-width) {
+        top: 0;
+        right: 0;
+      }
+    }
+
+    /*доб icon-phone псевдоэлементом*/
+    &--phone {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 18px;
+        height: 18px;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1;
+        background: url("../img/icon-phone.svg") no-repeat center;
+      }
+    }
+
+    /*доб icon-mail псевдоэлементом*/
+    &--mail {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 16px;
+        height: 16px;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1;
+        background: url("../img/icon-mail.svg") no-repeat center;
+      }
+    }
+  }
+
+  .field-info__text {
+    position: relative;
+    padding-left: 20px;
+    line-height: $line-height--large;
+    text-transform: uppercase;
+    color: $gray--darken;
+
+    @media (min-width: $desktop-width) {
+      padding-left: 0;
+      padding-right: 20px;
+    }
+
+    /*скрыть label на desktop*/
+    &--visible-mob {
+      @media (min-width: $desktop-width) {
+        display: none;
+      }
+    }
+
+    /*показать label на desktop*/
+    &--visible-desktop {
+      @media (max-width: $desktop-width) {
+        display: none;
+      }
+    }
+
+    /*ширина для эл-почты*/
+    &--width-mail {
+      @media (min-width: $desktop-width) {
+        flex-basis: 280px;
+      }
+    }
+  }
+
+  .field-info__input {
+    position: relative;
+    width: 100%;
+    padding: 22px 75px 20px 21px;
+    border: none;
+    background-color: $gray--lighten-2;
+    outline: none;
+
+    @media (max-width: $mobile-width) {
+      margin-top: 6px;
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-top: 6px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 0;
+    }
+
+    &:hover {
+      background: $gray--light-2;
+    }
+
+    &:focus {
+      outline: 4px solid $gray--light-2;
+      background: transparent;
+    }
+  }
+
+  .field-info__input::placeholder {
+    font-size: $font-size--larger;
+    font-weight: 700;
+    color: #000000;
+    opacity: 1;
+  }

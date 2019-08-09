@@ -1,0 +1,196 @@
+.field-checkbox {
+  position: relative;
+  display: flex;
+  width: 100%;
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 35px;
+    padding-left: 95px;
+    padding-right: 65px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 65px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /*серая полоса над блоком*/
+  &::before {
+    @media (max-width: $mobile-width) {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 111.2%;
+      height: 1px;
+      top: 0;
+      left: -5.65%;
+      background-color: $gray--light-2;
+    }
+  }
+}
+
+.field-checkbox__title {
+  width: 100%;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media (max-width: $mobile-width) {
+    padding: 20px 0 15px 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    margin-bottom: 15px;
+    padding: 25px 23.56% 25px 17.42%;
+
+    font-size: $font-size--large;
+    line-height: $line-height--large;
+
+    /*серая полоса слева от h2*/
+    &::before {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 25.615%;
+      height: 1px;
+      top: 50%;
+      left: -95px;
+      background-color: $gray--light-2;
+    }
+
+    /*сеpая полоса справа от h2*/
+    &::after {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 25.615%;
+      height: 1px;
+      top: 50%;
+      right: -65px;
+      background-color: $gray--light-2;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    margin-bottom: 18px;
+    padding-left: 280px;
+    padding-right: 280px;
+
+    /*серая полоса слева от h2*/
+    &::before {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 25.615%;
+      height: 1px;
+      top: 50%;
+      left: 0;
+      background-color: $gray--light-2;
+    }
+
+    /*сеpая полоса справа от h2*/
+    &::after {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 25.615%;
+      height: 1px;
+      top: 50%;
+      right: 0;
+      background-color: $gray--light-2;
+    }
+  }
+}
+
+.field-checkbox__input {
+  display: none;
+}
+//=================================
+/*стилизация label*/
+.field-checkbox__name {
+  display: block;
+  position: relative;
+  padding: 16px 0 16px 80px;
+  cursor: pointer;
+  font-size: $font-size--larger;
+  line-height: $line-height--large;
+  font-weight: 700;
+  color: #000000;
+
+  &:last-child {
+    @media (max-width: $mobile-width) {
+      margin-bottom: 24px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 46.7%;
+    margin-bottom: 31px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+    margin-bottom: 0;
+  }
+}
+
+.field-checkbox__name:hover {
+  &::before {
+    background: $gray--light-2;
+  }
+}
+
+.field-checkbox__name:active {
+  &::before {
+    background: $gray--light;
+  }
+
+  &:after {
+    opacity: 0.5;
+  }
+}
+
+/*стилизация фона checkbox*/
+.field-checkbox__name::before {
+  position: absolute;
+  content: "";
+  width: 56px;
+  height: 56px;
+  top: 0;
+  left: 0;
+  background-color: $gray--lighten-2;
+  border-radius: 4px;
+}
+
+/*стилизация активного radio*/
+.field-checkbox__input:checked + .field-checkbox__name::after {
+  position: absolute;
+  content: "";
+  width: 23px;
+  height: 16px;
+  top: 21px;
+  left: 15px;
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+}
+
+.field-checkbox--flex {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+  }
+}

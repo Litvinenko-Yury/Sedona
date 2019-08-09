@@ -1,0 +1,58 @@
+.search {
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #ffffff;
+
+  @media (max-width: $mobile-width) {
+    min-height: 288px;
+    padding: 30px 6.25% 0 6.25%;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 460px;
+    min-height: 320px;
+    margin: 0 auto;
+    padding-top: 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 460px;
+    min-height: 330px;
+    padding-top: 56px;
+  }
+
+
+  &__caption {
+    @media (max-width: $mobile-width) {
+      margin-bottom: 20px;
+      font-size: $font-size--large;
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 33px;
+      font-size: $font-size--x-large;
+      line-height: $line-height--large;
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__text {
+    line-height: $line-height--larger;
+    color: $gray--darken;
+
+    @media (max-width: $mobile-width) {
+      margin-bottom: 35px;
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 46px;
+    }
+  }
+}

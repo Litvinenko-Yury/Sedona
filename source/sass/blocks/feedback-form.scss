@@ -1,0 +1,42 @@
+.feedback-form {
+  position: relative;
+  background-color: #ffffff;
+
+  @media (max-width: $mobile-width) {
+    padding: 0 6.25% 41px 6.25%;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 70px;
+    padding: 0 7.8125% 0 7.8125%;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    padding: 0 120px 70px 120px;
+  }
+
+  &__remark {
+    @media (max-width: $mobile-width) {
+      display: none;
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 50%;
+      text-align: right;
+      margin: auto;
+      line-height: $line-height--large;
+      text-transform: uppercase;
+      color: $gray--darken;
+    }
+  }
+
+  &--btn {
+    @media (min-width: $tablet-width) {
+      width: 50%;
+    }
+  }
+}

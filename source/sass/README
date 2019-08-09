@@ -1,0 +1,13 @@
+﻿Папка для файлов препроцессора Sass.
+
+https://sass-lang.com
+
+--
+
+Структура файлов:
+
+sass/
+| - style.scss
+| - variables.scss
+| - normalize.scss
+| - [другие *.scss файлы]

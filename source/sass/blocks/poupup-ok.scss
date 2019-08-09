@@ -1,0 +1,65 @@
+.poupup-ok {
+  position: absolute;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  box-shadow: 3px 3px 20px 0 rgba(0, 0, 0, 0.35);
+  z-index: 10;
+
+  @media (max-width: $mobile-width) {
+    width: 320px;
+    left: 50%;
+    margin-left: -160px;
+    bottom: 110px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 640px;
+    left: 50%;
+    margin-left: -320px;
+    bottom: 350px;
+  }
+
+  @media (min-width: $desktop-width) {
+    bottom: 400px;
+  }
+
+  &__title {
+    text-align: center;
+
+    @media (max-width: $mobile-width) {
+      padding: 50px 0 40px 0;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding-top: 65px;
+      padding-bottom: 40px;
+      font-size: $font-size--x-large;
+      line-height: $line-height--large;
+    }
+  }
+
+  &__text {
+    margin-bottom: 40px;
+    padding: 0 50px 0 50px;
+    line-height: $line-height--larger;
+    text-align: center;
+    color: $gray--darken;
+
+    @media (min-width: $tablet-width) {
+      padding: 0 105px 0 105px;
+    }
+  }
+
+  &__btn-bg {
+    padding: 20px;
+    background-color: $gray--lighten-2;
+
+    @media (min-width: $tablet-width) {
+      padding: 43px 90px;
+    }
+  }
+
+  &--closed {
+    display: none;
+  }
+}

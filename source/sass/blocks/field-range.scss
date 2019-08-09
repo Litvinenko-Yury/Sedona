@@ -1,0 +1,74 @@
+.field-range {
+  border-radius: 0.25em;
+  border: 0;
+  padding: 0;
+  background: none;
+  font-size: inherit;
+  cursor: pointer;
+  appearance: none;
+
+  &::-webkit-slider-runnable-track,
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none; // stylelint-disable-line  property-no-vendor-prefix
+  }
+
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px rgba($color-main, $opacity);
+  }
+
+  //Фоновая линия ползунка
+  // Это — локальная примесь.
+  @mixin field-range-runnable-track {
+    box-sizing: border-box;
+    width: 100%;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  // Увы, тут похожие наборы свойств приходится писать порознь.
+  &::-webkit-slider-runnable-track {
+    @include field-range-runnable-track; // локальная примесь
+  }
+
+  &::-moz-range-track {
+    @include field-range-runnable-track; // локальная примесь
+  }
+
+  &::-ms-track {
+    @include field-range-runnable-track; // локальная примесь
+    color: transparent;
+  }
+
+  // Смещающийся элемент ползунка
+  // Это — локальная примесь.
+  @mixin field-range-slider-thumb {
+    box-sizing: border-box;
+    width: 10px;
+    height: 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 0;
+    box-shadow: none;
+    cursor: ew-resize;
+    background: #ffffff;
+  }
+
+  &::-webkit-slider-thumb {
+    @include field-range-slider-thumb; // локальная примесь
+    margin-top: -3.5px;
+  }
+
+  &::-moz-range-thumb {
+    @include field-range-slider-thumb; // локальная примесь
+  }
+
+  &::-ms-thumb {
+    @include field-range-slider-thumb; // локальная примесь
+  }
+
+  &::-ms-fill-lower,
+  &::-ms-tooltip {
+    display: none;
+  }
+}

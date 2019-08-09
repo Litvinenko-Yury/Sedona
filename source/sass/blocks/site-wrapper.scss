@@ -1,0 +1,12 @@
+.site-wrapper {
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1200px;
+    box-shadow: -10px 0 10px -5px #cccccc, 10px 0 10px -5px #cccccc;
+  }
+}

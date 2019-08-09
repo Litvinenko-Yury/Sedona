@@ -1,0 +1,99 @@
+.field-name {
+  position: relative;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+  }
+
+  /*серая полоса над блоком для моб*/
+  &::before {
+    @media (max-width: $mobile-width) {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 114%;
+      height: 1px;
+      top: 0;
+      left: -7%;
+      background-color: $gray--light-2;
+    }
+  }
+}
+
+.field-name__title {
+  width: 100%;
+
+  @media (max-width: $mobile-width) {
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 5px 0 56px 56px;
+    font-size: $font-size--large;
+    line-height: $line-height--large;
+    letter-spacing: 0.4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 79px;
+  }
+}
+
+.field-name__wrap {
+  display: flex;
+  width: 100%;
+  margin-bottom: 18px;
+
+  &:last-child {
+    @media (max-width: $mobile-width) {
+      margin-bottom: 23px;
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.field-name__text {
+  padding-top: 18px;
+  padding-right: 12px;
+  line-height: $line-height--large;
+  text-transform: uppercase;
+  color: $gray--darken;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 58px;
+    padding-right: 14px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 78px;
+  }
+}
+
+.field-name__input {
+  width: 100%;
+  padding: 22px 20px;
+  border: none;
+  outline: none;
+  background-color: $gray--lighten-2;
+
+  &:hover {
+    background: $gray--light-2;
+  }
+
+  &:focus {
+    outline: 4px solid $gray--light-2;
+    background: transparent;
+  }
+}
+
+.field-name__input::placeholder {
+  font-size: $font-size--larger;
+  font-weight: 700;
+  color: #000000;
+  opacity: 1;
+}

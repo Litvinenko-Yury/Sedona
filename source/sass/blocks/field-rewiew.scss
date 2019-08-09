@@ -1,0 +1,100 @@
+.field-rewiew {
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
+
+  &::before {
+    @media (max-width: $mobile-width) {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 111.2%;
+      height: 1px;
+      top: 0;
+      left: -5.65%;
+      background-color: $gray--light-2;
+    }
+  }
+}
+
+.field-rewiew__title {
+  position: relative;
+  width: 100%;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media (max-width: $mobile-width) {
+    padding: 20px 0 15px 0;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 57px;
+    font-size: $font-size--large;
+    line-height: $line-height--large;
+    text-transform: uppercase;
+    text-align: center;
+
+    /*серая полоса слева от h2*/
+    &::before {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 19.29%;
+      height: 1px;
+      top: 50%;
+      left: 0;
+      background-color: $gray--light-2;
+    }
+
+    /*сеpая полоса справа от h2*/
+    &::after {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 19.29%;
+      height: 1px;
+      top: 50%;
+      right: 0;
+      background-color: $gray--light-2;
+    }
+  }
+}
+
+.field-rewiew__input {
+  margin-bottom: 44px;
+  padding: 16px 20px;
+  width: 100%;
+  font-size: $font-size--larger;
+  line-height: $line-height--large;
+  font-weight: 700;
+  background-color: $gray--lighten-2;
+  border: none;
+  outline: none;
+  resize: none;
+
+  &::placeholder {
+    color: #000000;
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    color: #000000;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 51px;
+  }
+
+  &:hover {
+    background: $gray--light-2;
+  }
+
+  &:focus {
+    outline: 4px solid $gray--light-2;
+    background: transparent;
+  }
+}

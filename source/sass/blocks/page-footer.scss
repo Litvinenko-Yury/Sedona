@@ -1,0 +1,68 @@
+.page-footer {
+  text-align: center;
+  text-transform: uppercase;
+  background-color: $gray--lightest;
+
+  @media (max-width: $mobile-width) {
+    padding-top: 32px;
+    padding-bottom: 25px;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100px;
+    padding: 0 7.8125%;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 30px 120px 35px 120px;
+  }
+
+  &__link-visitsedona {
+    display: block;
+    font-size: $font-size--large;
+    font-weight: 700;
+    line-height: $line-height--large;
+    color: #000000;
+
+    @media (max-width: $mobile-width) {
+      margin-bottom: 36px;
+    }
+  }
+
+  &__copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__copyright svg {
+    margin-bottom: -15px;
+    width: 27px;
+    height: 34px;
+  }
+
+  &__text {
+    margin-right: 14px;
+    line-height: $line-height--large;
+    color: #000000;
+  }
+
+  &__link {
+    font-size: 0;
+  }
+
+  &__link svg {
+    fill: #000000;
+  }
+
+  &__link:hover svg {
+    fill: $color-main;
+  }
+
+  &__link:active svg {
+    fill: $gray;
+  }
+}

@@ -1,0 +1,18 @@
+.foto-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 33px 0 0 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 65px;
+    padding: 0 7.8125%;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    padding: 0;
+    padding-bottom: 70px;
+    background-color: #ffffff;
+  }
+}

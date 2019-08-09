@@ -1,0 +1,244 @@
+.video {
+  position: relative;
+  margin: 0 auto;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: #ffffff;
+
+  &::before {
+    @media (max-width: $mobile-width) {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 100%;
+      height: 1px;
+      top: -23px;
+      left: 0;
+      background-color: $gray--light-2;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 45px;
+    padding-top: 11px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 47px;
+    padding: 0 60px 0 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    padding-bottom: 122px;
+  }
+}
+
+.video__caption {
+  margin-bottom: 25px;
+  padding: 0 12.5% 0 12.5%;
+
+  @media (min-width: $tablet-width) {
+    font-size: $font-size--x-large;
+    line-height: $line-height--large;
+    margin-bottom: 33px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 325px;
+  }
+}
+
+.video__text {
+  padding: 0 12.5% 38px 12.5%;
+  line-height: $line-height--larger;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 16.975% 72px 16.975%;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 325px 69px 325px;
+  }
+}
+
+.video__wrap {
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    overflow-x: hidden;
+  }
+}
+
+.video__clip {
+  display: block;
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    height: 201px;
+    margin-bottom: 105px;
+    background: url("../img/video-mobile@1x.jpg") no-repeat center;
+    background-size: cover;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    height: 500px;
+    background: url("../img/video-tablet@1x.jpg") no-repeat center;
+    background-size: cover;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 800px;
+    height: 500px;
+    margin: 0 auto;
+    background: url("../img/video-desktop@1x.jpg") no-repeat center;
+    background-size: cover;
+  }
+}
+
+.video__controls {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0.99;
+
+  @media (max-width: $mobile-width) {
+    flex-wrap: wrap;
+    width: 87.5%;
+    min-height: 110px;
+    bottom: -64px;
+    z-index: 100;
+
+
+    & input[type="range"].field-range {
+      /* -webkit-appearance: none;*/
+      width: 85%;
+      height: 45px;
+      margin: 0 auto;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+
+    & input[type="range"].field-range {
+      flex-basis: 390px;
+      flex-grow: 1;
+      margin: 45px 0 45px 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 800px;
+    margin: 0 auto;
+  }
+}
+
+.video__controls svg {
+  fill: $gray--video-icon;
+
+  @media (min-width: $tablet-width) {
+    fill: #ffffff;
+  }
+}
+
+.field-range {
+  @media (max-width: $mobile-width) {
+    order: -1;
+  }
+}
+
+.video__replay,
+.video__cc,
+.video__full-screen {
+  padding-top: 21px;
+  padding-bottom: 20px;
+  user-select: none;
+  border: none;
+
+  @media (max-width: $mobile-width) {
+    background-color: $gray--lighten-2;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-right: 10px;
+    padding: 0 35px;
+    background-color: transparent;
+  }
+
+  &:active svg {
+    fill: $gray;
+  }
+
+  @media (min-width: $desktop-width) {
+    &:hover svg {
+      &:hover,
+      &:focus {
+        fill: $gray;
+      }
+
+      &:active {
+        fill: $gray-2;
+      }
+    }
+  }
+}
+
+.video__replay {
+  @media (max-width: $mobile-width) {
+    flex-grow: 1;
+    padding-right: 35.714%;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-right: 10px;
+    padding: 0 35px;
+  }
+}
+
+.video__replay svg {
+  width: 16px;
+  height: 20px;
+}
+
+.video__cc {
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.video__cc svg {
+  width: 32px;
+  height: 20px;
+}
+
+.video__full-screen {
+  padding-left: 20px;
+  padding-right: 25px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 30px;
+    margin-left: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.video__full-screen svg {
+  width: 20px;
+  height: 20px;
+}
