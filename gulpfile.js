@@ -16,7 +16,8 @@ var include = require("posthtml-include");
 var del = require("del");
 var htmlmin = require("gulp-htmlmin");
 var uglify = require("gulp-uglify");
-const ghPages = require('gh-pages');
+const ghPages = require("gh-pages");
+const path = require("path");
 
 //копируем папки из папки source в папку build.
 gulp.task("copyFolderBuild", function () {
@@ -142,6 +143,7 @@ gulp.task("webp", function () {
 
 //-----------------------------------------------------------
 //задача публикации на gh-pages
-gulp.task("gh-pages", function () {
-  ghpages.publish("build", callback);
-});
+function deploy(cb) {
+  ghPages.publish(path.join(process.cwd(), './build'), cb);
+}
+exports.deploy = deploy;
