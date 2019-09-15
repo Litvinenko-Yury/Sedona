@@ -28,8 +28,8 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    background-color: transparent;
     width: 20%;
+    background-color: rgba(black, 0);
 
     &:nth-child(4n + 2) {
       margin-right: 20%;
