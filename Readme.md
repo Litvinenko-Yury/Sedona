@@ -1,5 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
+Собранный проект на gh-pages: https://litvinenko-yury.github.io/Sedona/
+
 * Студент: [Юрий Литвиненко](https://up.htmlacademy.ru/adaptive/15/user/190466).
 * Наставник: Николай Громов.
 
